@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Home Page</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg bg-light" style="background-color: #e3f2fd;">
+		<!-- Navbar content -->
+
+		<div class="container-fluid">
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+					<a class="nav-link active" aria-current="page" href="#">Home</a>
+					<a class="nav-link" href="{{url_for('about')}}">About</a>
+					<a class="nav-link" href="{{url_for('signin')}}">SignIn</a>
+					<a class="nav-link" href="{{url_for('signup')}}">SignUp</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<br><br>
+	<div>
+		<h4>
+			<b>Welcome to IBM!!!</B>
+		</h4>
+	</div>
+	
+</body>
+
+</html>
