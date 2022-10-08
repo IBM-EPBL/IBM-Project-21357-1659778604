@@ -9,12 +9,14 @@ if (__name__ == "__main__ "):
 
 ## DB2 Database connectivity
 try:
-    conn = ibm_db.connect("DATABASE=bludb;HOSTNAME=1bbf73c5-d84a-4bb0-85b9-ab1a4348f4a4.c3n41cmd0nqnrk39u98g.databases.appdomain.cloud;PORT=32286;SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID=wjy24066;PWD=5EiYlQRwJWcgPVM7;PROTOCOL=TCPIP;SQLSTATE=58004;SQLCODE=-1042",'','')
+    conn = ibm_db.connect("DATABASE=bludb;HOSTNAME=1bbf73c5-d84a-4bb0-85b9-ab1a4348f4a4.c3n41cmd0nqnrk39u98g.databases.appdomain.cloud;PORT=32286;SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID=wjy24066;PWD=5EiYlQRwJWcgPVM7;PROTOCOL=TCPIP",'','')
 except:
     print("Unable to connect: ", ibm_db.conn_errormsg())
 
 ## Application Routing
 @app.route("/")
+
+
 @app.route("/signin")
 def signin() :
     return render_template('signin.html')
@@ -27,7 +29,7 @@ def adduser() :
         roll_number =  request.form['roll_number']
         password = request.form['password'] 
 
-        sql = "SELECT * FROM user WHERE email =?"
+        sql = "SELECT * FROM adduser WHERE email =?"
         stmt = ibm_db.prepare(conn, sql)
         ibm_db.bind_param(stmt,1,email)
         ibm_db.execute(stmt)
@@ -36,7 +38,7 @@ def adduser() :
         if account:
             return render_template('signin.html', msg="You are already a member, please login using your details")
         else:
-            insert_sql = "INSERT INTO user VALUES (?,?,?,?)"
+            insert_sql = "INSERT INTO adduser VALUES (?,?,?,?)"
             prep_stmt = ibm_db.prepare(conn, insert_sql)
             ibm_db.bind_param(prep_stmt, 1, email)
             ibm_db.bind_param(prep_stmt, 2, username)
@@ -48,6 +50,7 @@ def adduser() :
 @app.route("/index")
 def home() :
     return render_template('index.html')
+    
 
 @app.route("/signup")
 def signup():
@@ -59,7 +62,7 @@ def login():
         email = request.form['email']
         password = request.form['password']
        
-        sql = "SELECT * FROM user WHERE email =?"
+        sql = "SELECT * FROM adduser WHERE email =?"
         stmt = ibm_db.prepare(conn, sql)
         ibm_db.bind_param(stmt,1,email)
         ibm_db.execute(stmt)
