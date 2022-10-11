@@ -1,0 +1,32 @@
+{% extends 'base.html'%}
+
+{% block head %}
+<title>signup page</title>
+{% endblock %}
+
+
+{% block body %}
+
+<h2>SIGNUp Forms</h2>
+
+    
+  <div class="container">
+    <form action="{{url_for('addrec')}}" method="POST">
+      <h3>Student information</h3>
+      Name<br>
+      <input type="text" name="nm" class ="form-control"/></br>
+      Address<br>
+      <textarea name="add" class ="form-control" ></textarea><br>
+      city<br>
+      <input type="text" name="city" class ="form-control"/> <br>
+
+
+      PINCODE<br>
+      <input type="text" name="pin" class ="form-control"/><br>
+
+<button style="margin-top: 2ex;margin-left:50%"class="btn btn-success" type="submit">Login</button>
+    </form>   </div>
+
+
+{% endblock %}
+

@@ -1,0 +1,31 @@
+        {% extends 'base.html'%}
+
+        {% block head %}
+        <title>student inforamtion</title>
+        {% endblock %}
+        
+        
+        {% block body %}
+        <h3>Students inforamtions</h3>
+        
+        
+        <table border =1  class="table table-striped">
+            <thead>
+                <td ><b>NAME</b></td>
+                <td ><b>ADDRESS</b></td>
+                <td ><b>CITY</b></td>
+                <td ><b>PINCODE</b></td>
+
+            </thead>
+            {% for row in rows %}
+            <tr>
+            <td>{{row['name']}}</td>
+<td>{{row['addr']}}</td>
+            <td>{{row['city']}}</td>    
+            <td>{{row['pin']}}</td>    
+
+            </tr>
+            {% endfor%}
+        </table>
+        <a href="/">Go back to home page</a>
+        {% endblock %}
