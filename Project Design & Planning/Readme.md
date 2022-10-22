@@ -27,3 +27,9 @@
 > - [x] Data flow diagram
 >
 > - [x] Technology Stack
+
+# PROJECT PLANNING
+
+> - [x] Project Design
+>
+
