@@ -1,5 +1,0 @@
-## PROJECT DESIGN & PLANNING
-# PROJECT PLANNING
-
-> - [x] Project Design
->

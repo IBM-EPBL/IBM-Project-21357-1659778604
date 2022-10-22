@@ -28,8 +28,8 @@
 >
 > - [x] Technology Stack
 
-# PROJECT PLANNING
+# PROJECT PLANNING PHASE
 
-> - [x] Project Design
+> - [x] Sprint Delivery Plan, Prepare Milestone & Activity
 >
 
