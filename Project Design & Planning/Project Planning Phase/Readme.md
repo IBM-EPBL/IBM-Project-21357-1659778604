@@ -2,5 +2,7 @@
 
 # PROJECT PLANNING
 
-> - [x] Sprint Delivery Plan, Prepare Milestone & Activity
+> - [x] Sprint Delivery Plan
+>
+> - [x] Prepare Milestone & Activity
 >
