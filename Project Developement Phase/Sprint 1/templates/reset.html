@@ -1,0 +1,27 @@
+{% extends 'signin.html'%}
+
+{% block head %}
+<title>Reset password page</title>
+{% endblock %}
+
+
+{% block body %}
+
+<h2>Reset password</h2>
+
+<form >
+    <div class="container">
+        <label for="resetPasswordUsername">Username</label>
+		<input type="text" class="form-control" id="resetPasswordUsername" name="resetPasswordUsername"><br/>
+				
+	    <label for="resetPasswordPassword1">New Password</label>
+		<input type="password" class="form-control" id="resetPasswordPassword1" name="resetPasswordPassword1"><br/>
+					  
+		<label for="resetPasswordPassword2">Confirm New Password</label>
+		<input type="password" class="form-control" id="resetPasswordPassword2" name="resetPasswordPassword2"><br/>
+					 
+			
+	    <button type="button" id="resetPasswordButton" class="btn btn-warning">Reset Password</button>
+    </div>
+	</form>
+	{% endblock %}
