@@ -1,6 +1,6 @@
 ## SETTING UP APPLICATION ENVIRONMENT
 
-
+>
 > - [x]Create Flask Project
 > 
 > - [x]Create IBM Cloud Account
@@ -10,4 +10,4 @@
 > - [x]Docker CLI Install
 > 
 > - [x]Create an Account In SendGrid
-> 
+ 
