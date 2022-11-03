@@ -18,6 +18,8 @@
 >
 > - [x] Assignment 3
 >
+> - [x] Assignment 4
+>
 
 # Deepika T
 
@@ -27,6 +29,8 @@
 >
 > - [x] Assignment 3
 >
+> - [x] Assignment 4
+>
 
 # Devi Bala S
 
@@ -35,4 +39,6 @@
 > - [x] Assignment 2
 >
 > - [x] Assignment 3
+>
+> - [x] Assignment 4
 >
