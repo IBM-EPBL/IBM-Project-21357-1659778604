@@ -53,15 +53,7 @@ businesses.</li>
 ![Technical architecture diagram](https://lh3.googleusercontent.com/CREVNwiSXyEeHRqKw-PyOLl3407cgeGKXaoHe4XxiA2BKwElixI7EHYyIo65PCZwi7t7vvg_wvZ6V44M_i9K0n7rk4MkKcfoSGN6GKBwTDVBYVIoon8EfgcBwBiKNA)
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## :chart_with_upwards_trend:Project Workflow :
- - Goods are reviwed,sorted and stored.
- - Inventory levels are monitored
- - Stock orders are placed
- - Stock order are approved
- - Goods are taken from stock
- - Inventory level are updated
- - low stock levels trigger purchasing
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 
 
 
