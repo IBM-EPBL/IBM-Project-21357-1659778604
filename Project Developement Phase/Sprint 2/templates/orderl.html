@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+  Orders Listing
+
+{% endblock %}
+
+
+{% block heading %}
+
+  Orders Listing
+
+{% endblock %}
+
+
+
+
+
+  {% block head %}
+
+  <!-- Custom styles for this page -->
+  <link href="/static/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+  {% endblock %}
+
+{% block main %}
+
+          <!-- DataTales Example -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Orders Listing</h6>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>Order ID</th>
+                      <th>First Name</th>
+                      <th>Middle Name</th>
+                      <th>Last Name</th>
+                      <th>Product</th>
+                      <th>Number Shipped</th>
+                      <th>Order Date</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th>Order ID</th>
+                      <th>First Name</th>
+                      <th>Middle Name</th>
+                      <th>Last Name</th>
+                      <th>Product</th>
+                      <th>Number Shipped</th>
+                      <th>Order Date</th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                    {% for row in rows %}
+                    <tr>
+                      <td>{{ row["orderId"] }}</td>
+                      <td>{{ row["first"] }}</td>
+                      <td>{{ row["middle"] }}</td>
+                      <td>{{ row["last"] }}</td>
+                      <td>{{ row["product_name"] }} - {{ row["partNumber"] }}</td>
+                      <td>{{ row["numberOut"] }}</td>
+                      <td>{{ row["oDate"] }}</td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+ {% endblock %}

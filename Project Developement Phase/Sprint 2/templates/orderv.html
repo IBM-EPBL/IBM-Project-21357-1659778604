@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+
+    Outgoing Orders
+
+{% endblock %}
+
+
+{% block heading %}
+
+    Outgoing Orders
+
+{% endblock %}
+
+
+{% block main %}
+
+<div class="shifter"
+
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">Add Record</h6>
+        </div>
+        <div class="card-body">
+          <form class="user" action="/orderv" method="POST">
+            <div class="form-group">
+              <input type="date" class="form-control form-control-user" name="order-date" placeholder="Date of Order" required>
+            </div>
+            <div class="form-group">
+              <select class="form-control form-control-user" name="product-name">
+                <option value="" selected disabled>Select Product</option>
+
+                {% for product in products %}
+
+                  <option value="{{ product.productName }}">{{ product.id }} | {{ product.productName }} - {{ product.partNumber }}</option>
+
+                {% endfor %}
+
+              </select>
+            </div>
+            <div class="form-group">
+              <input type="number" class="form-control form-control-user" name="orders" placeholder="Number Shipped" required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control form-control-user" name="first-name" placeholder="First Name" required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control form-control-user" name="middle-name" placeholder="Middle Name">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control form-control-user" name="last-name" placeholder="Last Name">
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-6 mb-3 mb-sm-0">
+                <input type="submit" class="btn btn-primary btn-user btn-block">
+              </div>
+              <div class="col-sm-6">
+                <input type="reset" class="btn btn-primary btn-user btn-block">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

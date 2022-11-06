@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+  Purchases Listing
+
+{% endblock %}
+
+
+{% block heading %}
+
+  Purchases Listing
+
+{% endblock %}
+
+
+
+
+
+  {% block head %}
+
+  <!-- Custom styles for this page -->
+  <link href="/static/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+  {% endblock %}
+
+{% block main %}
+
+          <!-- DataTales Example -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Purchases</h6>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>Purchase ID</th>
+                      <th>Supplier Name</th>
+                      <th>Product</th>
+                      <th>Number Received</th>
+                      <th>Purchase Date</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th>Purchase ID</th>
+                      <th>Supplier Name</th>
+                      <th>Product</th>
+                      <th>Number Received</th>
+                      <th>Purchase Date</th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                    {% for row in rows %}
+                    <tr>
+                      <td>{{ row["purchaseId"] }}</td>
+                      <td>{{ row["supplier_name"] }}</td>
+                      <td>{{ row["product_name"] }} - {{ row["partNumber"] }}</td>
+                      <td>{{ row["numberIn"] }}</td>
+                      <td>{{ row["pDate"] }}</td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+ {% endblock %}

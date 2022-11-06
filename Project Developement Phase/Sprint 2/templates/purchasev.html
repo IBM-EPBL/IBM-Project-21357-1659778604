@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+
+    Incoming Purchases
+
+{% endblock %}
+
+
+{% block heading %}
+
+    Incoming Purchases
+
+{% endblock %}
+
+
+{% block main %}
+
+<div class="shifter"
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">Add Record</h6>
+        </div>
+        <div class="card-body">
+          <form class="user" action="/purchasev" method="POST">
+            <div class="form-group">
+              <input type="date" class="form-control form-control-user" name="purchase-date" placeholder="Date of purchase" required>
+            </div>
+            <div class="form-group">
+              <select class="form-control form-control-user" name="product-name">
+                <option value="">Select Product</option>
+
+                {% for product in products %}
+
+                  <option value="{{ product.productName }}">{{ product.id }} | {{ product.productName }} - {{ product.partNumber }}</option>
+
+                {% endfor %}
+              </select>
+            </div>
+            <div class="form-group">
+              <input type="number" class="form-control form-control-user" name="purchases" placeholder="Number Received">
+            </div>
+            <div class="form-group">
+              <select class="form-control form-control-user" name="supplier-name">
+                <option value="">Select Supplier</option>
+
+                {% for supplier in suppliers %}
+
+                  <option value="{{ supplier.supplier }}">{{ supplier.id }} | {{ supplier.supplier }}</option>
+
+                {% endfor %}
+              </select>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-6 mb-3 mb-sm-0">
+                <input type="submit" class="btn btn-primary btn-user btn-block">
+              </div>
+              <div class="col-sm-6">
+                <input type="reset" class="btn btn-primary btn-user btn-block">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

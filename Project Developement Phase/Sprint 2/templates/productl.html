@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+  Products Listing
+
+{% endblock %}
+
+
+{% block heading %}
+
+  Products Listing
+
+{% endblock %}
+
+
+
+
+
+  {% block head %}
+
+  <!-- Custom styles for this page -->
+  <link href="/static/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+  {% endblock %}
+
+{% block main %}
+
+          <!-- DataTales Example -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Products</h6>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>Product ID</th>
+                      <th>Name</th>
+                      <th>Part Number</th>
+                      <th>Label</th>
+                      <th>Total Inventory Received</th>
+                      <th>Total Inventory Shipped</th>
+                      <th>Inventory On Hand</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th>Product ID</th>
+                      <th>Name</th>
+                      <th>Part Number</th>
+                      <th>Label</th>
+                      <th>Total Inventory Received</th>
+                      <th>Total Inventory Shipped</th>
+                      <th>Inventory On Hand</th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                    {% for row in rows %}
+                    <tr>
+                      <td>{{ row["id"] }}</td>
+                      <td>{{ row["productName"] }}</td>
+                      <td>{{ row["partNumber"] }}</td>
+                      <td>{{ row["productLabel"] }}</td>
+                      <td>{{ row["inventoryIn"] }}</td>
+                      <td>{{ row["inventoryOut"] }}</td>
+                      <td>{{ row["inventoryOnHand"] }}</td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+ {% endblock %}
