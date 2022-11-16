@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style>
+        table {
+            margin: 0 auto;
+            font-size: large;
+            border: 1px solid black;
+        }
+ 
+        h1 {
+            text-align: center;
+            color: #006600;
+            font-size: xx-large;
+            font-family: 'Gill Sans', 'Gill Sans MT',
+            ' Calibri', 'Trebuchet MS', 'sans-serif';
+        }
+ 
+        td {
+            background-color: #E4F5D4;
+            border: 1px solid black;
+        }
+ 
+        th,
+        td {
+            font-weight: bold;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+ 
+        td {
+            font-weight: lighter;
+        }
+        .sidenav {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #0059b3;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a{
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: rgb(239, 239, 239);
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #111;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+    </style>
+  
+</head>
+<body>
+    <div class="sidenav">
+  
+        <a href="{{url_for('add_stock') }}"><strong>Add stock<strong></a>
+        <a href="{{url_for('update') }}"><strong>Update stock details<strong></a>
+        <a href="{{url_for('view_stock') }}"><strong>View stock<strong></a>
+         <a href="{{url_for('delete')}}"><strong>Delete stock<strong></a>
+       <a href="{{url_for('logout') }}"><strong>Log out<strong></a>
+        </div>
+
+	<div class="container" >
+		    
+	  <table class="table table-hover">
+	    <thead>
+	      <tr>
+	    	<th>Product name</th>
+	    	<th>Item quantity</th>
+	    	<th>Warehouse location</th>
+	      </tr>
+	    </thead>  
+
+        {% for item in products %}
+        
+         <tr>
+            <td>{{item.PRODNAME}}</td>
+            <td>{{item.QUANTITY}}</td>
+            <td>{{item.WAREHOUSE_LOCATION}}</td>
+
+         </tr>
+         {% endfor %}
+     </table>
+	 </table>
+ 
+ <body>
+ </html>
