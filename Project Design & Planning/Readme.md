@@ -32,6 +32,6 @@
 
 > - [x] Sprint Delivery Plan
 >
-> - [x]Prepare Milestone & Activity
+> - [x] Prepare Milestone & Activity
 >
 

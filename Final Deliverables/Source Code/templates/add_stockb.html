@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<style>
+.registerbtn {
+  /*font-size:130%;
+  color: white;
+  padding: 16px 20px;
+  margin-left: 10% ;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+  opacity: 0.9;*/
+
+  background-color: darkblue;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  padding: 4px 14px;
+  height:34px;
+  width:320px;
+  cursor: pointer;
+  font-size: 1em;
+  border: 1px solid #b5b5b5;
+  text-transform:uppercase;
+  color:white;
+  font-weight:bold;
+}
+</style>
+<body>
+	<center>
+	    <h3>Record deleted successfully!</h3>
+		<form action="" method="POST">
+		<input type="submit" value="Redirect to Dashboard" class="registerbtn"/>
+		</form>
+	</center>
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "4bd6f313-33d4-4e87-8825-22b90b8e3c2c", // The ID of this integration.
+      region: "au-syd", // The region your integration is hosted in.
+      serviceInstanceID: "60e1396a-421f-4091-b39a-a23a546843e8", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+</body>
+
+</html>
