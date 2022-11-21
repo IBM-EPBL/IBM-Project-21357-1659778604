@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 import ibm_db
-import sqlite3 as sql
+
 import re
 
 

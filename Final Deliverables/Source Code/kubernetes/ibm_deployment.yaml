@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ims-app
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ims-app
+  template:
+    metadata:
+      labels:
+        app: ims-app
+
+    spec:
+      containers:
+        - name: ims-portal-container
+          image: jp.icr.io/anitta07/ims-app
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
+              protocol: TCP

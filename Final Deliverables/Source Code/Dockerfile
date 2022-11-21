@@ -1,8 +1,7 @@
 FROM python:3.10.6
 WORKDIR /app
-ADD . /app
-COPY requirements.txt /app
-RUN python3 -m pip install -r requirements.txt
-RUN python3 -m pip install ibm_db
+COPY requirements.txt ./
+RUN pip install -r requirements.txt
+COPY . .
 EXPOSE 5000
-CMD ["python","app.py"]
+CMD ["python","./app.py"]
